@@ -1,8 +1,7 @@
 FROM php:8.4-apache
 
 # Install Xdebug
-RUN pecl install xdebug \
-    && docker-php-ext-enable xdebug
+RUN pecl install xdebug && docker-php-ext-enable xdebug
 
 RUN { \
       echo "xdebug.mode=debug,develop"; \
